@@ -1,0 +1,52 @@
+# Technical Design Document: <module 'Assignment1' from 'C:\\Users\\Samantha\\PycharmProjects\\COP2373\\Assignment1.py'>
+
+# Name: Justin Oberg
+# Date: January 22, 2026
+# Program Description: Sell tickets, return # of purchases
+
+## Function: main
+None
+
+## Function: sale
+Decription:
+Asks for number of tickets to purchase, reduces from remaining
+
+Parameters:
+tsold(int): less than 4, <4
+
+Variables:
+tsold (int): Number of tickets
+
+Logic:
+
+1. Ask for number of tickets to purchase
+2. Verify less than 4 tickets
+    a. If less than 4 tickets, totaltickets - tsold
+    b. If more then 4 tickets, return error
+
+Return:
+1. totaltickets
+2. tsold
+
+## Function: total
+Description:
+For all sales within tsold < 4 and totaltickets > 0, increase number of purchases (buyers)
+
+Parameters:
+None
+
+Variables:
+1. buyers(int)
+
+Logic:
+1. While totaltickets != 0, loop
+2. Per transaction, increase number of purchases (buyers)
+
+Return:
+None
+
+#Link to your repository: https://github.com/JObergSCF/COP2373
+
+ 
+
+https://github.com/JObergSCF/COP2373
