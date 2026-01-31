@@ -1,0 +1,19 @@
+Justin Oberg
+1/31/2026
+COP2373
+Assignment2: Debug Report
+
+Issue:
+When running code: unexpected line stop at line18 (see picture)
+ 
+Resulting in errors for calculations on line 4, 26, 36.
+
+Fixed:
+Code at line18 read as “500” instead of the integer 500. Can’t calculate non-numeric strings.  Quotations removed, code runs.
+ 
+
+Additions:
+Reworked code through line0 to provide error messages that display incorrect values in the tuple, dictionary, list.
+
+Result:
+Code works as intended. Errors displaying useful suggestions implemented.  
