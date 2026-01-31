@@ -1,0 +1,62 @@
+# Technical Design Document: <module 'Assignment2' from "C:\\Users\\Samantha\\Desktop\\Spring'26\\COP2373\\Assignment 2\\Assignment2.py">
+
+# Name: Justin Oberg
+# Date: January 30, 2026
+# Program Description: Debugging and error handling in price table
+
+## Function: apply_discount
+Parameters:
+Discount amount must be "Non-Error"
+
+Variables:
+new_price = price - discount_amount
+
+Logic:
+Verify discount_amount is of type "Non-Error"
+
+Return:
+new_price
+
+## Function: calculate_discount
+Function: Calculate discount given price and discount rate
+
+Parameters:
+price(float): If price is not of int, float, or str, return error
+price < 0: If price not greater than 0, return error
+
+
+Variables:
+price = float(price)
+discount_rate = price * discount_rate
+discount_amount = price * discount_rate
+
+Logic:
+    Price:
+    1. Verify of type that can mathematically calculated
+    2. Verify amount that can be applied through discount
+
+    Discount amount:
+    1. Verify discount amount is calculated
+
+Return:
+Discount Amount
+    or
+TypeError, ValueError
+
+## Function: main
+Parameters:
+Verify final_price is calculated
+
+Variables:
+Product Table - List
+Final_price = apply_discount(price, discount_amount)
+
+Logic:
+1. Verify calculation
+    a. Return prices
+    b. Return error
+
+Return:
+None
+
+#Link to your repository: https://github.com/JObergSCF/COP2373
