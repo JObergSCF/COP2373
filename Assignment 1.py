@@ -22,7 +22,7 @@ def sale(totaltickets):
     1. totaltickets
     2. tsold
     """
-    tsold = int(input("How many tickets would you like to purchase? "))
+    tsold = int(input("How many tickets you need, man? "))
 
     #If attempt to purchase more than 4 tickets, return error
     if tsold > 4:
@@ -81,4 +81,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
