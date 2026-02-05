@@ -69,9 +69,9 @@ def total(totaltickets):
 
         #Whhile non-error, increase purchasers
         if tsold > 0:
-            buyers += 1
+            purchasers += 1
     print("There are no remaining tickets.")
-    print(f"There were {buyers} buyers.")
+    print(f"There were {purchasers} purchasers.")
 
 
 def main():
@@ -81,6 +81,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
