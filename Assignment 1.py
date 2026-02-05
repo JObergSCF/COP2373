@@ -75,9 +75,10 @@ def total(totaltickets):
 
 
 def main():
-    totaltickets = 20   # now lives inside a function
+    totaltickets = 10
     total(totaltickets)
 
 
 if __name__ == "__main__":
     main()
+
