@@ -1,0 +1,78 @@
+# Technical Design Document: <module 'Assignment3' from 'C:\\Users\\Samantha\\Desktop\\Assignment3.py'>
+
+# Name: Justin Oberg
+# Date: February, 14 2026
+# Program Description: E-Mail spam scanner
+
+## Function: email_analysis
+Parameters:
+For words in spam list, add to accumulator; measure percentage of email that is spam words
+
+Variables:
+email_lower; turn text into lower case to avoid case-sensitive matching errors
+spam_score; set to 0 to initialize accumulator
+found_words; set to empty list to initialize accumulator
+words; addition of .split to count number of spam words in message
+total_words; total number of words in message
+spam_percent; percentage of spam words in message
+
+Logic:
+1. Make email into lowercase readable
+2. Set spam_score to 0
+3. Initialize spam words found list
+4. Split words into single countable instances
+5. Keep running total of words in message to calculate percentage of spam words
+6. Initialize accumulator
+    a. Append spam words to list
+
+Return:
+spam_score, found_words, spam_percent
+
+## Function: main
+Parameters:
+
+Variables:
+
+keywords; spam words
+email; the email message
+likelihood; the score total of the number of spam keywords
+
+Logic:
+1. User input email message
+2. Calculate spam score and percentage
+3. Print number of spam words
+4. Print likelihood of spam message
+5. Print percentage of spam message
+    a. Print list of words that were flagged to be spam
+
+
+Return:
+None
+
+## Function: spam_amount
+Parameters:
+Give likelihood of spam message based on number of spam words in email.
+
+Variables:
+None
+
+Logic:
+1.Calculate "score" of spam words, running total of words flagged as spam
+
+Return:
+High/Moderate/Low/Unlikely to be spam
+
+## Function: spamlist
+Parameters:
+List of words likely to be in spam emails
+
+Variables:
+None
+
+Logic:
+N/A, list of words
+
+Return:
+List of 30 words likely to be in spam emails
+
+#Link to repository: https://github.com/JObergSCF/COP2373
