@@ -1,0 +1,130 @@
+def spamlist():
+    """
+    Parameters:
+    List of words likely to be in spam emails
+
+    Variables:
+    None
+
+    Logic:
+    N/A, list of words
+
+    Return:
+    List of 30 words likely to be in spam emails
+    """
+    return [
+        "free", "winner", "congratulations", "urgent", "act now", "limited time",
+        "click here", "risk free", "guaranteed", "no obligation", "claim now",
+        "exclusive deal", "special promotion", "offer expires", "money back",
+        "double your income", "work from home", "make money fast", "earn cash",
+        "lowest price", "cheap", "credit card required", "no credit check",
+        "pre-approved", "this is not spam", "dear friend", "confidential",
+        "investment opportunity", "prize", "bonus"
+    ]
+
+def email_analysis(email, spamlist):
+    """
+    Parameters:
+    For words in spam list, add to accumulator; measure percentage of email that is spam words
+
+    Variables:
+    email_lower; turn text into lower case to avoid case-sensitive matching errors
+    spam_score; set to 0 to initialize accumulator
+    found_words; set to empty list to initialize accumulator
+    words; addition of .split to count number of spam words in message
+    total_words; total number of words in message
+    spam_percent; percentage of spam words in message
+    
+    Logic:
+    1. Make email into lowercase readable
+    2. Set spam_score to 0
+    3. Initialize spam words found list
+    4. Split words into single countable instances
+    5. Keep running total of words in message to calculate percentage of spam words
+    6. Initialize accumulator
+        a. Append spam words to list
+
+    Return:
+    spam_score, found_words, spam_percent
+
+    """
+    email_lower = email.lower()
+    spam_score = 0
+    found_words = []
+
+    words = email_lower.split()
+    total_words = len(words)
+
+    for word in spamlist:
+        if word in email_lower:
+            spam_score += 1
+            found_words.append(word)
+
+        if total_words > 0:
+            spam_percent = (spam_score / total_words) * 100
+        else:
+            spam_percent = 0
+
+        return spam_score, found_words, spam_percent
+
+def spam_amount(score):
+    """
+    Parameters:
+    Give likelihood of spam message based on number of spam words in email.
+
+    Variables:
+    None
+
+    Logic:
+    1.Calculate "score" of spam words, running total of words flagged as spam
+
+    Return:
+    High/Moderate/Low/Unlikely to be spam
+
+    """
+    if score >= 10:
+        return "High likelihood of spam"
+    elif score >= 5:
+        return "Moderate likelihood of spam"
+    elif score > 0:
+        return "Low likelihood of spam"
+    else:
+        return "Unlikely to be spam"
+
+def main():
+    """
+    Parameters:
+    Ask user for email input, return score and peercentage of email that is likely to be flagged for spam
+
+    Variables:
+
+        keywords; spam words
+        email; the email message
+        likelihood; the score total of the number of spam keywords
+
+    Logic:
+    1. User input email message
+    2. Calculate spam score and percentage
+    3. Print number of spam words
+    4. Print likelihood of spam message
+    5. Print percentage of spam message
+        a. Print list of words that were flagged to be spam
+
+
+    Return:
+    None
+
+    """
+    keywords = spamlist()
+    email = input("Enter your email message: ")
+
+    score, found_words, spam_percent = email_analysis(email, keywords)
+    likelihood = spam_amount(score)
+
+    print("\nSpam score:", score)
+    print("Spam likelihood:", likelihood)
+    print("Percent of message likely to be spam: {:.2f}%".format(spam_percent))
+    print("Flagged words:", found_words)
+
+if __name__ == "__main__":
+    main()
