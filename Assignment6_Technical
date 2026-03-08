@@ -1,0 +1,65 @@
+# Technical Design Document: <module 'Assignment6' from 'C:\\Users\\Samantha\\Desktop\\Assignment6.py'>
+
+# Name: Justin Oberg
+# Date: March, 7 2026
+# Program Description: Regular expressions
+
+## Function: main
+Parameters:
+None
+
+Variables:
+1. zipcode: zipcode input
+2. ssn: ssn input
+3. phone: phone input
+
+Logic:
+1. Get input
+    a. zipcode
+    b. ssn
+    c. phone number
+2. Print valid/invalid based on boolean matches
+
+Return:
+None
+
+## Function: test_phone
+Parameters:
+None
+
+Variables:
+pattern = 10 numerical digits; 3-3-4
+
+Logic:
+None
+
+Return:
+boolean: true/false
+
+## Function: test_ssn
+Parameters:
+None
+
+Variables:
+pattern = 9 numerical digits; 3-2-4
+
+Logic:
+None
+
+Return:
+boolean: true/false
+
+## Function: test_zipcode
+Parameters:
+None
+
+Variables:
+pattern = 5 numerical digits
+
+Logic:
+None
+
+Return:
+boolean: true/false
+
+#Link to repository: https://github.com/JObergSCF/COP2373  
