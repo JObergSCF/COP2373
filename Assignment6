@@ -1,0 +1,100 @@
+import re
+
+def test_zipcode(zipcode):
+    """
+    Parameters:
+    None
+
+    Variables:
+    pattern = 5 numerical digits
+
+    Logic:
+    None
+
+    Return:
+    boolean: true/false
+
+    """
+
+    #Set pattern for zipcode to 5 numbers
+    pattern = r"^\d{5}$"
+    #Return boolean (T/F) for Zipcode pattern
+    return bool(re.match(pattern, zipcode))
+
+def test_ssn(ssn):
+    """
+    Parameters:
+    None
+
+    Variables:
+    pattern = 9 numerical digits; 3-2-4
+
+    Logic:
+    None
+
+    Return:
+    boolean: true/false
+
+    """
+
+    #Set pattern for SSN
+    pattern = r"^\d{3}-?\d{2}-?\d{4}$"
+    #Return boolean for SSN pattern
+    return bool(re.match(pattern, ssn))
+
+def test_phone(phone):
+    """
+    Parameters:
+    None
+
+    Variables:
+    pattern = 10 numerical digits; 3-3-4
+
+    Logic:
+    None
+
+    Return:
+    boolean: true/false
+
+    """
+
+    #Set pattern for telephone number
+    pattern = r"^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$"
+    #Return boolean for telephone number
+    return bool(re.match(pattern, phone))
+
+def main():
+    """
+    Parameters:
+    None
+
+    Variables:
+    1. zipcode: zipcode input
+    2. ssn: ssn input
+    3. phone: phone input
+
+    Logic:
+    1. Get input
+        a. zipcode
+        b. ssn
+        c. phone number
+    2. Print valid/invalid based on boolean matches
+
+    Return:
+    None
+    
+    """
+    #Get user input and strip formatting
+    zipcode = input("Enter zipcode: ").strip()
+    ssn = input("Enter ssn: ").strip()
+    phone = input("Enter phone: ").strip()
+
+    #Print results
+    print("\nVerification Results:")
+    print(f"Zipcode: {'Valid' if test_zipcode(zipcode) else 'Invalid'}")
+    print(f"SSN: {'Valid' if test_ssn(ssn) else 'Invalid'}")
+    print(f"Phone: {'Valid' if test_phone(phone) else 'Invalid'}")
+
+
+if __name__ == "__main__":
+    main()
