@@ -1,0 +1,62 @@
+import re
+
+def user_input():
+    """
+    Parameters:
+        None
+    Variables:
+        None
+    Logic:
+        Use input() to collect paragraph
+    Return:
+        str: paragraph
+    """
+
+    #Return paragraph input to be analyzed by the next function
+    return input("Please enter a paragraph: ")
+
+def matching(text):
+    """
+    Parameters:
+        text (str): Paragraph being analyzed
+    Variables:
+        Pattern: Regex Pattern
+        Sentences: List of matched sentences
+    Logic:
+        1. Use regex to find sentences that start with capital letter or number
+        2. Iterates through matches to print sentence
+        3. Counts total number of sentences
+    Return:
+    None (print output to console)
+    """
+
+    #Paragraph regex
+    pattern = r'\d+\..*?[.!?]|[A-Z].*?[.!?]'
+
+    #Sentence regex for newline
+    sentences = re.findall(pattern, text, flags=re.DOTALL | re.MULTILINE)
+
+    #Example print/return from the book
+    for s in sentences:
+        print("->", s)
+
+    #Result yield
+    print("Total sentences:", len(sentences))
+
+def main():
+    """
+    Parameters:
+    None
+    Variables:
+    None
+    Logic:
+        Calls previous functions in main
+    Return:
+    None
+    """
+
+    paragraph = user_input()
+    matching(paragraph)
+
+if __name__ == "__main__":
+    main()
