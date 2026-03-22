@@ -1,0 +1,40 @@
+# Technical Design Document: <module 'Assignment7' from 'C:\\Users\\Samantha\\Desktop\\Assignment7.py'>
+
+# Name: Justin Oberg
+# Date: March, 21 2026
+# Program Description: Regex
+
+## Function: main
+Parameters:
+None
+Variables:
+None
+Logic:
+    Calls previous functions in main
+Return:
+None
+
+## Function: matching
+Parameters:
+    text (str): Paragraph being analyzed
+Variables:
+    Pattern: Regex Pattern
+    Sentences: List of matched sentences
+Logic:
+    1. Use regex to find sentences that start with capital letter or number
+    2. Iterates through matches to print sentence
+    3. Counts total number of sentences
+Return:
+None (print output to console)
+
+## Function: user_input
+Parameters:
+    None
+Variables:
+    None
+Logic:
+    Use input() to collect paragraph
+Return:
+    str: paragraph
+
+#Link to repository: https://github.com/JObergSCF/COP2373
